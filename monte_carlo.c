@@ -35,9 +35,24 @@ int main(void) {
     if (!(fabs(pi0 - M_PI) < 0.4)) {
       printf("Estimate with even %d iterations is %f which is not accurate enough.\n", i, pi0);
       abort();
-    }
+   }
+   }
+   }
+  float mc_pi(int a){
+  int count=0;
+  for(int i=0;i<=a;i++)
+  {float x=frandom();
+  float y=frandom(); 
+  float val=x*x+y*y;
+  double distance;
+  distance=sqrt(val);
+  //float distance=val/z;
+  
+  if(distance<=1)
+  count++;
   }
-}
+  return 4*count/a;
+  }
 
 
 
