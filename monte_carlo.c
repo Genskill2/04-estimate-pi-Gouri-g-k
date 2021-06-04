@@ -40,10 +40,11 @@ int main(void) {
    }
   float mc_pi(int a){
   int count=0;
+  double pi;
   for(int i=0;i<=a;i++)
   {float x=frandom();
   float y=frandom(); 
-  float val=x*x+y*y;
+  float val=(x*x)+(y*y);
   double distance;
   distance=sqrt(val);
   //float distance=val/z;
@@ -51,7 +52,8 @@ int main(void) {
   if(distance<=1)
   count++;
   }
-  return 4*count/a;
+ pi=(double)count/a*4;
+ return pi;
   }
 
 
